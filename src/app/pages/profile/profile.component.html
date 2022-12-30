@@ -1,0 +1,13 @@
+<div class="profile-info mt-4">
+  <div class="form_size">
+    <ng-container *ngIf="user && !loading; else loadingTemp">
+      <h2>Hello World mr. {{ user.name }}</h2>
+    </ng-container>
+
+    <ng-template #loadingTemp>
+      <div *ngIf="!user && loading" class="text-center">
+        <app-spinner></app-spinner>
+      </div>
+    </ng-template>
+  </div>
+</div>

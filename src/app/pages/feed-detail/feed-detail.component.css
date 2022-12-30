@@ -1,0 +1,18 @@
+.feed_detail {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+hr {
+  border-top: 2px solid black;
+}
+
+.feed_detail img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.feed_detail .note {
+  margin-top: 12px;
+}

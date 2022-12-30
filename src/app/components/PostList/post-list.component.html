@@ -1,0 +1,28 @@
+<article class="post">
+  <div class="post__header">
+    <h3 class="post__meta">
+      Posted by {{ post.creator.name }} on
+      {{ post.createdAt | date: 'dd-MM-yyyy' }}
+    </h3>
+    <h1 class="post__title">
+      {{ post.title }}
+    </h1>
+  </div>
+  <div class="post__actions">
+    <a [routerLink]="post._id" class="btn btn-outline-primary"> View </a>
+    <a
+      *ngIf="post.creator._id === userId"
+      (click)="edit(post._id)"
+      class="btn btn-outline-success"
+    >
+      Edit
+    </a>
+    <a
+      *ngIf="post.creator._id === userId"
+      (click)="del(post._id)"
+      class="btn btn-outline-danger"
+    >
+      Delete
+    </a>
+  </div>
+</article>

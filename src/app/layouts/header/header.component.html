@@ -1,0 +1,28 @@
+<nav class="main-nav">
+  <a routerLink="/" class="logo"> MessageNode </a>
+  <div class="spacer"></div>
+  <ul class="main-nav__items">
+    <ng-container *ngIf="isAuthenticated">
+      <li class="nav__item">
+        <a routerLinkActive="active" routerLink="/feed">Feed</a>
+      </li>
+    </ng-container>
+    <!-- <ng-container *ngIf="isAuthenticated"></ng-container> -->
+    <ng-container *ngIf="!isAuthenticated">
+      <li class="nav__item">
+        <a routerLinkActive="active" routerLink="/login">Login</a>
+      </li>
+      <li class="nav__item">
+        <a routerLinkActive="active" routerLink="/register">Register</a>
+      </li>
+    </ng-container>
+    <ng-container *ngIf="isAuthenticated">
+      <li class="nav__item">
+        <a routerLinkActive="active" routerLink="/profile">Profile</a>
+      </li>
+      <li (click)="signOut()" class="nav__item">
+        <a>Logout</a>
+      </li>
+    </ng-container>
+  </ul>
+</nav>

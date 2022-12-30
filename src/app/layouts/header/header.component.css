@@ -1,0 +1,41 @@
+.main-nav {
+  height: 100%;
+  padding: 0.35rem 1rem;
+  display: flex;
+  align-items: center;
+  background-color: purple;
+}
+
+.logo {
+  font-size: 1rem;
+  font-weight: bold;
+  border: 1px solid white;
+  padding: 0.5rem;
+  color: white;
+  text-decoration: none;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.main-nav__items {
+  list-style: none;
+  padding: 0;
+  margin: 0 1.5rem;
+  display: flex;
+}
+
+.main-nav__items .nav__item {
+  padding: 0 1.5rem;
+}
+.main-nav__items .nav__item a {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+.main-nav__items .nav__item a:hover,
+.main-nav__items .nav__item a:active,
+.main-nav__items .nav__item a.active {
+  color: #fab83f;
+}
