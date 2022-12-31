@@ -14,7 +14,7 @@ export class CreatePostPageComponent implements OnInit {
   pathImage = 'http://localhost:5000';
   form = new FormGroup({
     id: new FormControl(''),
-    title: new FormControl('', [Validators.required]),
+    title: new FormControl(''),
     content: new FormControl(''),
   });
 

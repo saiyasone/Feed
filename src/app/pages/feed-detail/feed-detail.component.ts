@@ -8,7 +8,7 @@ import { PostService } from '../../services/post.service';
   styleUrls: ['./feed-detail.component.css'],
 })
 export class FeedDetailPage {
-  pathImage = 'http://localhost:5000';
+  pathImage = 'http://localhost:5000/images';
   post: Post;
   constructor(
     private postService: PostService,
