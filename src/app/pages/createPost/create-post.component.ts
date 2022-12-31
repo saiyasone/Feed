@@ -11,7 +11,7 @@ export class CreatePostPageComponent implements OnInit {
   isCreate = false;
   selectFile = null;
   previewPhoto = '';
-  pathImage = 'http://localhost:5000';
+  pathImage = 'http://localhost:5000/images/';
   form = new FormGroup({
     id: new FormControl(''),
     title: new FormControl(''),
