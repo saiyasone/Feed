@@ -58,8 +58,8 @@ export class AuthService {
   }
 
   private isAuthData(): any {
-    const token = localStorage.getItem('token');
-    const userId = localStorage.getItem('userId');
+    const token = localStorage.getItem('token') || '';
+    const userId = localStorage.getItem('userId') || '';
     if (!token) {
       return null;
     }
@@ -72,6 +72,9 @@ export class AuthService {
 
   autoSignIn() {
     const authData = this.isAuthData();
+    if (!authData) {
+      return;
+    }
     const token = authData.token;
     const userId = authData.userId;
     if (token === null) {
