@@ -2,7 +2,7 @@
   <div class="post__header">
     <h3 class="post__meta">
       Posted by {{ post.creator.name }} on
-      {{ post.createdAt | date: 'dd-MM-yyyy' }}
+      {{ post.createdAt | date: 'dd-MM-yyyy hh:mm a' }}
     </h3>
     <h1 class="post__title">
       {{ post.title }}

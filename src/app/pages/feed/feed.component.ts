@@ -27,9 +27,7 @@ export class PostPageComponent implements OnInit, OnDestroy {
     this.ondestroy$.complete();
   }
 
-  onConnectIO() {
-     
-  }
+  onConnectIO() {}
 
   handlePage(index: number) {
     this.page = index;
