@@ -16,6 +16,11 @@
                 id="email"
                 class="form-control"
               />
+              <small
+                class="isError"
+                *ngIf="f['email'].invalid && f['email'].touched"
+                >Enter Email</small
+              >
             </div>
             <div class="col-12">
               <label for="password" class="form-label">Password</label>
@@ -26,6 +31,11 @@
                 placeholder="password"
                 class="form-control"
               />
+              <small
+                class="isError"
+                *ngIf="f['password'].invalid && f['password'].touched"
+                >Enter Password</small
+              >
             </div>
             <div class="col-12 mt-3">
               <button type="submit" class="btn btn-primary">Login</button>
