@@ -7,35 +7,35 @@
       <div class="card-body">
         <form [formGroup]="form" (ngSubmit)="onSubmit()">
           <div class="row">
-            <div class="col-12">
+            <div class="col-12 pb-3">
               <label for="email" class="form-label">Email</label>
               <input
+                [ngClass]="{
+                  'is-invalid':
+                    f['email'].errors &&
+                    (f['email'].touched || f['email'].dirty)
+                }"
                 type="email"
                 formControlName="email"
                 placeholder="example@gmail.com"
                 id="email"
                 class="form-control"
               />
-              <small
-                class="isError"
-                *ngIf="f['email'].invalid && f['email'].touched"
-                >Enter Email</small
-              >
             </div>
             <div class="col-12">
               <label for="password" class="form-label">Password</label>
               <input
+                [ngClass]="{
+                  'is-invalid':
+                    f['password'].errors &&
+                    (f['password'].touched || f['password'].dirty)
+                }"
                 type="password"
                 id="password"
                 formControlName="password"
                 placeholder="password"
                 class="form-control"
               />
-              <small
-                class="isError"
-                *ngIf="f['password'].invalid && f['password'].touched"
-                >Enter Password</small
-              >
             </div>
             <div class="col-12 mt-3">
               <button type="submit" class="btn btn-primary">Login</button>
